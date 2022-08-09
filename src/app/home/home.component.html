@@ -1,0 +1,107 @@
+
+<mat-toolbar class="form">
+  <a href="/" class="nav-link home"><img src="../../assets/img/logo-insa-a10.png" width="130"  title="Home" alt="Home" class="ng-star-inserted"><!----><!----></a>
+  <h2 style="color: #fff; margin-left: 420px; margin-bottom: 20px;">Creación de Firma </h2>
+</mat-toolbar>
+
+<div class="contenedor" >
+  <mat-card>
+    <h4>Completa la información para crear una firma</h4>
+    <mat-form-field class="padding">
+      <input matInput #name (keyup)="0" type="text" placeholder="Nombre completo" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput #activity (keyup)="0" type="text" placeholder="Cargo" />
+    </mat-form-field>
+
+    <br />
+    <mat-form-field class="padding">
+      <input matInput #telefono (keyup)="0" type="tel" pattern="[0-9]{9}" mask="+00 09 0000 0000" placeholder="Teléfono" />
+    </mat-form-field>
+    <mat-form-field class="padding">
+      <input matInput #email (keyup)="0" type="email" placeholder="Email" />
+    </mat-form-field>
+    <mat-form-field class="padding">
+      <input matInput #linkedin (keyup)="0" type="text" placeholder="Linkedin" />
+    </mat-form-field>
+
+    <br />
+
+
+    <!-- <button mat-raised-button color="primary">Register</button> -->
+  </mat-card>
+
+  <br>
+  <mat-card>
+    <div>
+      <table id="tabla-firma" border="0"  width="360" height="275"  cellspacing="0" cellpadding="0" style="background:  rgba(0, 0, 0, 0.87); padding-top:20px !important; ">
+        <tbody>
+          <tr><td height="50" colspan="3"  style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';  font-size:17px; padding-top:12px; font-weight:bold; color: #fff; text-transform: uppercase; letter-spacing: 1px; padding-left: 10px; " border="0">{{name.value}}</td>
+
+            <td width="130" rowspan="2" align="right" valign="top"><img src="../../assets/img/logo-insa-a10.png" width="130"  style="right: 10px; padding-right: 5px;" >
+            </td>
+          </tr>
+          <tr>
+            <td height="10" colspan="3" style="font-size:14px; padding-bottom:8px;font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';  color: #84E8FD; letter-spacing:1px; padding-left: 10px;    text-transform: uppercase;" border="0">{{activity.value}}</td>
+
+          </tr>
+          <tr>
+            <td width="50" height="10" bgcolor="#FFFFFF" style="margin:5px; text-align: center; width:8px; padding-left: 10px; padding-top: 10px;"><img src="../../assets/img/telefono.png" style="width:7px;">
+            </td>
+            <td colspan="4" bgcolor="#FFFFFF"><a href="tel:{{telefono.value}}"style="text-decoration: none!important; color: #000000; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';  font-size: 13px; padding:3px;     padding-left: 7px;"  target="_blank">{{telefono.value}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td height="10" bgcolor="#FFFFFF" style="margin:5px; text-align: center; width:8px;padding-left: 10px;"><img src="../../assets/img/email.png" style="width: 11px;">
+            </td>
+            <td  colspan="4" bgcolor="#FFFFFF"><a href="mailto:{{email.value}}" style="text-decoration: none !important; color:#000000; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';  font-size: 13px;   margin: 3px; padding-left: 7px; " target="_blank">{{email.value}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td height="10" bgcolor="#FFFFFF" style="margin:5px; text-align: center; width:8px;padding-left: 10px;"><img src="../../assets/img/in.png" style="width: 13px;">
+            </td>
+            <td  colspan="4" bgcolor="#FFFFFF"><a href="https://www.linkedin.com/in/{{linkedin.value}}/"  style="text-decoration: none !important;color: #282828; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; float:left; text-align:left;   font-size: 12px; padding-left: 7px;" target="_blank">{{linkedin.value}}</a>
+            </td>
+          </tr>
+          <tr>
+            <td height="10" valign="top" bgcolor="#FFFFFF" style="margin:5px; text-align: center; width:8px;padding-left: 10px;"><img src="../../assets/img/location.png" style="width: 10px;">
+            </td>
+            <td  colspan="4"  bgcolor="#FFFFFF"><a href="https://goo.gl/maps/CzmuWYwBy8SxumGu8" style="text-decoration: none !important;color: #282828; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; float:left; text-align:left; font-size: 12px; padding-bottom: 6px; padding-left: 7px;	" target="_blank">Augusto Leguia Norte 100, oficina 406. Las Condes. Santiago. Chile</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="40" colspan="4">
+              <table width="140" align="left" cellpadding="0" cellspacing="0" style="height: 30px;">
+                <tbody>
+                <tr>
+                  <td width="140" colspan="-1"   border="0"><a href="https://www.insachile.com" style=" text-decoration: none !important; color: #fff; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; text-align:left;    font-size: 13px;  margin: 10px; float: left; " target="_blank">insachile.com</a>
+                  </td>
+                  <td ><a href="https://www.youtube.com/channel/UCLchyBi0YDa71N74MeL94lQ"  target="_blank"> <img src="../../assets/img/cir-you.png" width="23"  style="margin:0px"></a></td>
+                  <td ><a href="https://www.linkedin.com/company/insachile/"  target="_blank"><img src="../../assets/img/cir-in.png" width="24"  style="margin:0px"></a></td>
+                </tr>
+                </tbody>
+              </table>
+              <table width="140" align="right" cellpadding="0" cellspacing="0" style="height: 30px;">
+                <tbody>
+                <tr>
+                  <td width="156" colspan="-1"   border="0"><a href="https://www.analytics10.com" style=" text-decoration: none !important; color: #fff; font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; float: right; text-align:right;   font-size: 13px;  margin: 10px;  " target="_blank">analytics10.com</a>
+                  </td>
+                  <td ><a href="https://www.linkedin.com/company/analytics-10/"  target="_blank"><img src="../../assets/img/cir-in.png" width="24"  style="margin:0px"></a></td>
+                </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <p> <br>     <br></p>
+        <p>Click en el botón, para copiar la firma creada y luego pegar el contenido en la configuración de su administrador de correo </p>
+        <button mat-raised-button (click)="copyText()" value="click to copy" data-placement="top" data-toggle="tooltip" title="Click para copiar firma" class="mat-warn" >
+          Copiar Firma de correo
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>
